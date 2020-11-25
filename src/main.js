@@ -8,6 +8,11 @@ Vue.config.productionTip = false
 // css
 import '@/styles/global.scss'
 
+// antdv
+import 'ant-design-vue/dist/antd.css'; // or 'ant-design-vue/dist/antd.less'
+import Antd from 'ant-design-vue';
+Vue.use(Antd)
+
 new Vue({
   router,
   store,

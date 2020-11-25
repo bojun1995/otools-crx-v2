@@ -1,10 +1,17 @@
 <template>
-  <div class="temp-bg full-height">hola</div>
+  <div class="temp-bg full-height">
+
+    <test-btn></test-btn>
+  </div>
 </template>
 
 <script>
+// comp
+import TestBtn from '@/components/base/test-btn/index'
+
 export default {
   name: 'Desktop',
+  components: { TestBtn },
   data() {
     return {
       
