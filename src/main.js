@@ -5,6 +5,9 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+// css
+import '@/styles/global.scss'
+
 new Vue({
   router,
   store,
