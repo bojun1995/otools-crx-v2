@@ -1,0 +1,37 @@
+@import '../common/public-class.scss';
+@import '../common/variable.scss';
+
+@import './light-v1.scss';
+@import './dark-v1.scss';
+
+$theme-list: (
+  light-v1: $light-v1,
+  dark-v1: $dark-v1
+);
+
+@mixin theme-control(){
+  @each $theme-name, $theme-obj in $theme-list {
+    $theme-obj: $theme-obj !global;
+    [data-theme = '#{$theme-name}'] & {
+      @content;
+    }
+  }
+}
+
+@function get-theme-val($theme-key){
+  @return map-get($theme-obj, $key: $theme-key);
+}
+
+// 背景色
+@mixin background-color($val-key) {
+  @include theme-control {
+    background-color: get-theme-val($val-key)
+  }
+}
+
+// 字体色
+@mixin font-color($val-key) {
+  @include theme-control {
+    color: get-theme-val($val-key)
+  }
+}

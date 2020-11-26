@@ -3,10 +3,10 @@
     <a-row>
       <a-col :span="24">
         <a-button-group>
-          <a-button>
+          <a-button @click="onThemeChange('dark-v1')">
             dark
           </a-button>
-          <a-button>
+          <a-button @click="onThemeChange('light-v1')">
             light
           </a-button>
         </a-button-group>
@@ -32,7 +32,9 @@ export default {
   watch: {},
   created() {},
   methods: {
-
+    onThemeChange(theme) {
+      this.$emit('on-theme-change', theme)
+    }
   }
 }
 </script>
