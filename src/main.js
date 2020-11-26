@@ -5,8 +5,8 @@ import store from './store'
 
 Vue.config.productionTip = false
 
-// css
-import '@/styles/global.scss'
+// scss
+import '@/styles/index.scss'
 
 // antdv
 import 'ant-design-vue/dist/antd.css'; // or 'ant-design-vue/dist/antd.less'

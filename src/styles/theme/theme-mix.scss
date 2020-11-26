@@ -1,0 +1,15 @@
+@import './light-v1.scss';
+@import './dark-v1.scss';
+
+$theme-list: (
+  light-v1: $light-v1,
+  dark-v1: $dark-v1
+)
+
+// @mixin theme() {
+//   @each $name, $theme in $theme-list {
+//     [data-theme = '#{$name}'] & {
+
+//     }
+//   }
+// }

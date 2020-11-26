@@ -4,15 +4,16 @@ const resolvePath = dir => {
 }
 
 module.exports = {
-  css: {
-    loaderOptions: {
-      sass: {
-        prependData: `
-          @import "@/styles/global.scss";
-          @import "@/styles/common.scss";
-          @import "@/styles/variable.scss";
-        `,
-      },
-    },
-  },
+  chainWebpack: config => {
+    const oneOfsMap = config.module.rule('scss').oneOfs.store
+    oneOfsMap.forEach(item => {
+      item
+      .use('sass-resources-loader')
+      .loader('sass-resources-loader')
+      .options({
+        resources: './src/styles/index.scss'
+      })
+      .end()
+    })
+  }
 }
