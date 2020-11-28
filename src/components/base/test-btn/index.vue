@@ -33,7 +33,7 @@ export default {
   created() {},
   methods: {
     onThemeChange(theme) {
-      this.$emit('on-theme-change', theme)
+      this.$store.commit('CHANGE_THEME', theme)
     }
   }
 }

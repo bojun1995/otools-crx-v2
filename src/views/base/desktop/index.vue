@@ -1,13 +1,15 @@
 <template>
-  <div class="desktop full-height" :data-theme="themeName">
-    <test-btn @on-theme-change="onThemeChange"></test-btn>
+  <div class="desktop full-height">
+    <test-btn></test-btn>
+    <span>{{ cp_theme }}</span>
   </div>
 </template>
 
 <script>
 // comp
 import TestBtn from '@/components/base/test-btn/index'
- 
+import { mapState } from 'vuex'
+
 export default {
   name: 'Desktop',
   components: { TestBtn },
@@ -16,14 +18,16 @@ export default {
       themeName: 'dark-v1',
     }
   },
-  computed: {},
+  computed: {
+    cp_theme() {
+      let { state: { BASE: { THEME = '' } = {} } } = this.$store
+      return THEME
+    }
+  },
   watch: {},
   created() {},
   methods: {
-    onThemeChange(theme) {
-      this.themeName = theme
-      window.document.documentElement.setAttribute("data-theme", theme)
-    }
+
   }
 }
 </script>

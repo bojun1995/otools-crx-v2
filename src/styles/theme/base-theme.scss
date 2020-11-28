@@ -12,7 +12,7 @@ $theme-list: (
 @mixin theme-control(){
   @each $theme-name, $theme-obj in $theme-list {
     $theme-obj: $theme-obj !global;
-    [data-theme = '#{$theme-name}'] & {
+    [theme = '#{$theme-name}'] & {
       @content;
     }
   }
