@@ -1,7 +1,7 @@
 <template>
   <div>
-    <a-row>
-      <a-col :span="24">
+    <a-form layout="inline">
+      <a-form-item label="theme">
         <a-button-group>
           <a-button @click="onThemeChange('dark-v1')">
             dark
@@ -10,13 +10,8 @@
             light
           </a-button>
         </a-button-group>
-      </a-col>
-    </a-row>
-    <a-row>
-      <a-col :span="24">
-        hola
-      </a-col>
-    </a-row>
+      </a-form-item>
+    </a-form>
   </div>
 </template>
 

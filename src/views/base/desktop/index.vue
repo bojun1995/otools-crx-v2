@@ -1,28 +1,25 @@
 <template>
   <div class="desktop full-height">
     <test-btn></test-btn>
-    <span>{{ cp_theme }}</span>
+    <app-dock></app-dock>
   </div>
 </template>
 
 <script>
 // comp
 import TestBtn from '@/components/base/test-btn/index'
-import { mapState } from 'vuex'
+import AppDock from '@/components/base/app-dock/index'
 
 export default {
   name: 'Desktop',
-  components: { TestBtn },
+  components: { TestBtn, AppDock },
   data() {
     return {
-      themeName: 'dark-v1',
+      
     }
   },
   computed: {
-    cp_theme() {
-      let { state: { BASE: { THEME = '' } = {} } } = this.$store
-      return THEME
-    }
+
   },
   watch: {},
   created() {},
@@ -36,9 +33,8 @@ export default {
 @import "@/styles/theme/base-theme.scss";
 
 .desktop {
-  transition-duration: $transition-time;
-  font-size: 100px;
-  @include font-color("font-color");
-  @include background-color("back-color");
+  @include transition-duration();
+  @include font-color('font-color');
+  @include background-color('background-color');
 }
 </style>
