@@ -37,7 +37,7 @@ export default {
   height: 50px;
   width: 50px;
   text-align: center;
-  padding-top: 7px;
+  padding-top: 8px;
   margin-right: 1px;
   &:last-child {
     margin-right: 0px;
@@ -50,7 +50,7 @@ export default {
   height: 100%;
   width: 44px;
   margin: 0 auto;
-  border-bottom: 5px solid rgb(57, 201, 153);
+  border-bottom: 4px solid rgb(57, 201, 153);
   @include transition-duration(0.1s);
   &:hover {
     width: 50px;
