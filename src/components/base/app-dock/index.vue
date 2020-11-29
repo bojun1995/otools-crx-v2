@@ -1,20 +1,43 @@
 <template>
   <div class="app-dock-container">
     <div class="app-dock">
-      1231
+      <dock-app-icon v-for="(item, idx) in cp_openAppList" :key="idx" :type="item.type">
+      </dock-app-icon>
     </div>
   </div>
 </template>
 
 <script>
+// comp
+import DockAppIcon from './dock-app-icon/index'
+
 export default {
   name: 'AppDock',
+  components: { DockAppIcon },
   data() {
     return {
-      
+      openAppList: [
+        { id: 'github', sort: 0, type: 'github' },
+        { id: 'control', sort: 2, type: 'control' },
+        { id: 'compass', sort: 1, type: 'compass' },
+        { id: 'compass', sort: 3, type: 'code' },
+      ]
     }
   },
-  computed: {},
+  computed: {
+    /**
+     * @description : 按sort排序
+     */
+    cp_openAppList() {
+      let ret = []
+      ret = this.openAppList.sort((a, b) => {
+        let { sort: sort_a = 0 } = a
+        let { sort: sort_b = 0 } = b
+        return sort_a - sort_b
+      })
+      return ret
+    }
+  },
   watch: {},
   created() {},
   methods: {
@@ -26,27 +49,27 @@ export default {
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
 @import "@/styles/theme/base-theme.scss";
 
+// 背景色
+@mixin dock-bg-color($val-key) {
+  @include theme-control {
+    background-color: get-theme-val($val-key)
+  }
+}
+
 .app-dock-container {
   position: absolute;
   bottom: 0px;
-  height: 70px;
+  height: 50px;
   width: 100%;
-  padding: 10px;
+  text-align: center;
 }
 
 .app-dock {
   height: 100%;
-  border: 1px solid rgb(217, 217, 217);
-  border-radius: 5px;
-
   overflow: hidden;
-  background: rgba(255, 255, 255, .3);
   z-index: 1;
-
-  &::before {
-    z-index: -1;
-    margin: -30px;
-    filter: blur(20px);
-  }
+  @include dock-bg-color('dock-bg-color');
+  @include transition-duration();
+  backdrop-filter: blur(10px);
 }
 </style>

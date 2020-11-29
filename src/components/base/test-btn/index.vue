@@ -11,6 +11,9 @@
           </a-button>
         </a-button-group>
       </a-form-item>
+      <a-form-item label="themeName">
+        <span>{{ cp_theme }}</span>
+      </a-form-item>
     </a-form>
   </div>
 </template>
@@ -23,7 +26,16 @@ export default {
       
     }
   },
-  computed: {},
+  computed: {
+    cp_theme() {
+      let ret = ''
+      let { THEME = '' } = this.$store.state.BASE
+      if(null !== THEME) {
+        ret = THEME
+      }
+      return ret
+    }
+  },
   watch: {},
   created() {},
   methods: {

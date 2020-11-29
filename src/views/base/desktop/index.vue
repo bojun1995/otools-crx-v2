@@ -1,5 +1,5 @@
 <template>
-  <div class="desktop full-height">
+  <div class="desktop desktop_bg full-height" :style="desktop_style">
     <test-btn></test-btn>
     <app-dock></app-dock>
   </div>
@@ -15,7 +15,10 @@ export default {
   components: { TestBtn, AppDock },
   data() {
     return {
-      
+      desktop_style: {
+        backgroundImage: 'url('+ require('@/assets/img/sekiro.png') +')',
+        // backgroundImage: 'url('+ require('@/assets/img/rocket.jpg') +')',
+      }
     }
   },
   computed: {
@@ -35,6 +38,11 @@ export default {
 .desktop {
   @include transition-duration();
   @include font-color('font-color');
-  @include background-color('background-color');
+}
+.desktop_bg {
+  background-repeat: repeat-x;
+  background-position: top;
+  background-size: auto 100%;
+  background-size: cover;
 }
 </style>
