@@ -1,5 +1,14 @@
+$theme-main-color: #5bffb5;
+
 $dark-v1: (
   font-color: #ffffff,
   background-color: #000000,
+
+  // dock
   dock-bg-color: rgba(19, 19, 19, 0.618),
+  dock-icon-border-color: $theme-main-color,
+
+  // app
+  app-header-color: #21252B,
+  app-header-border-color: #DEE1E6,
 )

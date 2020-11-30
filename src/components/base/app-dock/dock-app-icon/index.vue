@@ -32,6 +32,12 @@ export default {
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
 @import "@/styles/theme/base-theme.scss";
 
+@mixin dock-icon-border-color($val-key) {
+  @include theme-control {
+    border-bottom-color: get-theme-val($val-key);
+  }
+}
+
 .dock-app-icon_container {
   display: inline-block;
   height: 50px;
@@ -50,7 +56,8 @@ export default {
   height: 100%;
   width: 44px;
   margin: 0 auto;
-  border-bottom: 4px solid rgb(57, 201, 153);
+  border-bottom: 4px solid;
+  @include dock-icon-border-color('dock-icon-border-color');
   @include transition-duration(0.1s);
   &:hover {
     width: 50px;

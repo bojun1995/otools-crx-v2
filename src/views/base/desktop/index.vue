@@ -1,6 +1,7 @@
 <template>
   <div class="desktop desktop_bg full-height" :style="desktop_style">
     <test-btn></test-btn>
+    <app-container></app-container>
     <app-dock></app-dock>
   </div>
 </template>
@@ -9,10 +10,11 @@
 // comp
 import TestBtn from '@/components/base/test-btn/index'
 import AppDock from '@/components/base/app-dock/index'
+import AppContainer from '@/components/base/app-container/index'
 
 export default {
   name: 'Desktop',
-  components: { TestBtn, AppDock },
+  components: { TestBtn, AppDock, AppContainer },
   data() {
     return {
       desktop_style: {
