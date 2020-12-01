@@ -4,6 +4,10 @@ const resolvePath = dir => {
 }
 
 module.exports = {
+  configureWebpack: {
+    // debugger不准确开启
+    devtool: 'source-map'
+  },
   chainWebpack: config => {
     const oneOfsMap = config.module.rule('scss').oneOfs.store
     oneOfsMap.forEach(item => {
@@ -15,5 +19,5 @@ module.exports = {
       })
       .end()
     })
-  }
+  },
 }

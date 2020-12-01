@@ -1,6 +1,6 @@
 <template>
   <div class="desktop desktop_bg full-height" :style="desktop_style">
-    <div class="desktop-main">
+    <div id="desktopMain" class="desktop-main">
       <test-btn></test-btn>
       <app-container></app-container>
     </div>
