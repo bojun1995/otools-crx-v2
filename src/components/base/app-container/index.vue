@@ -31,6 +31,7 @@ export default {
 .app-container {
   height: 70vh;
   width: 70vw;
+  border-radius: #{$app-container-border-radius};
 
   background-color: #fff;
 }

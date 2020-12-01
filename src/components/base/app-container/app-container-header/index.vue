@@ -1,12 +1,21 @@
 <template>
   <div class="app-container-header">
-    <span class="_title">{{ title }}</span>
+    <span class="header_title">{{ title }}</span>
+    <div class="right-button_container">
+      <right-button type="close" circleBgColor="#E06C75"></right-button>
+      <right-button type="border"></right-button>
+      <right-button type="minus"></right-button>
+    </div>
   </div>
 </template>
 
 <script>
+// comp
+import RightButton from './right-button'
+
 export default {
   name: 'AppContainerHeader',
+  components: { RightButton },
   props: {
     title: {
       type: String,
@@ -43,8 +52,10 @@ export default {
 }
 
 .app-container-header {
-  height: 30px;
+  height: #{$app-container-header-height};
   width: 100%;
+  border-top-left-radius: #{$app-container-border-radius};
+  border-top-right-radius: #{$app-container-border-radius};
   padding-left: 5px;
   @include back-ground-color('app-header-color');
 
@@ -52,8 +63,12 @@ export default {
   @include border-bottom-color('app-header-border-color');
 }
 
-._title {
-  line-height: 30px;
+.header_title {
+  line-height: #{$app-container-header-height};
   user-select: none;
+}
+
+.right-button_container {
+  float: right;
 }
 </style>

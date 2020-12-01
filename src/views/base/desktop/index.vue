@@ -1,7 +1,9 @@
 <template>
   <div class="desktop desktop_bg full-height" :style="desktop_style">
-    <test-btn></test-btn>
-    <app-container></app-container>
+    <div class="desktop-main">
+      <test-btn></test-btn>
+      <app-container></app-container>
+    </div>
     <app-dock></app-dock>
   </div>
 </template>
@@ -41,6 +43,12 @@ export default {
   @include transition-duration();
   @include font-color('font-color');
 }
+
+.desktop-main {
+  height: calc(100vh - #{$dock-height});
+  width: 100%;
+}
+
 .desktop_bg {
   background-repeat: repeat-x;
   background-position: top;

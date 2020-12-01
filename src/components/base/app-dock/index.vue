@@ -59,7 +59,7 @@ export default {
 .app-dock-container {
   position: absolute;
   bottom: 0px;
-  height: 50px;
+  height: $dock-height;
   width: 100%;
   text-align: center;
 }

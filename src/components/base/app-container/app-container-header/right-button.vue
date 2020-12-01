@@ -1,28 +1,80 @@
 <template>
-  <div class="_right-button">
-
+  <div class="right-button_container">
+    <div class="right-button-circle_bg" :style="circleBgStyle" @mousemove="onMouseMove" @mouseleave="onMouseLeave">
+      <a-icon :type="type"/>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'RightButton',
+  props: {
+    type: {
+      type: String,
+      default: 'close'
+    },
+    circleBgColor: {
+      type: String,
+      default: '#DEE1E6'
+    }
+  },
   data() {
     return {
-      
+      circleBgStyle: {}
     }
   },
   computed: {},
   watch: {},
   created() {},
   methods: {
-
+    /**
+     * @description : 鼠标移入
+     */
+    onMouseMove() {
+      let ret = {
+        cursor: 'pointer',
+        backgroundColor: this.circleBgColor
+      }
+      this.circleBgStyle = ret
+    },
+    /**
+     * @description : 鼠标移出
+     */
+    onMouseLeave() {
+      let ret = {}
+      this.circleBgStyle = ret
+    },
   }
 }
 </script>
 
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
-._right-button {
+@import "@/styles/theme/base-theme.scss";
+
+.right-button_container {
   display: inline-block;
+  height: #{$app-container-header-height};
+  width: #{$app-container-header-height};
+  line-height: #{$app-container-header-height};
+  text-align: center;
+}
+
+.right-button-circle_bg {
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: calc(#{$app-container-header-height} - 7px);
+  height: calc(#{$app-container-header-height} - 7px);
+  border-radius: calc(#{$app-container-header-height} - 7px);
+  font-size: calc(#{$app-container-header-height} - 17px);
+  line-height: calc(#{$app-container-header-height} - 7px);
+  @include transition-duration();
+  // &:hover {
+  //   cursor: pointer;
+  //   background-color: rgb(134, 134, 134);
+  // }
 }
 </style>
