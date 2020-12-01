@@ -52,6 +52,8 @@ export default {
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
 @import "@/styles/theme/base-theme.scss";
 
+$circle-height: calc(#{$app-container-header-height} - 7px);
+
 .right-button_container {
   display: inline-block;
   height: #{$app-container-header-height};
@@ -66,11 +68,11 @@ export default {
   top: 50%;
   transform: translateY(-50%);
 
-  width: calc(#{$app-container-header-height} - 7px);
-  height: calc(#{$app-container-header-height} - 7px);
-  border-radius: calc(#{$app-container-header-height} - 7px);
-  font-size: calc(#{$app-container-header-height} - 17px);
-  line-height: calc(#{$app-container-header-height} - 7px);
+  width: #{$circle-height};
+  height: #{$circle-height};
+  border-radius: #{$circle-height};
+  font-size: calc(#{$circle-height} - 10px);
+  line-height: #{$circle-height};
   @include transition-duration();
   // &:hover {
   //   cursor: pointer;
