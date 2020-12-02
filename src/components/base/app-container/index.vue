@@ -1,6 +1,7 @@
 <template>
   <div ref="appContainer" v-draggable="dragProps" class="app-container" >
     <app-container-header ref="appHeader"></app-container-header>
+    <app-container-main class="app-main"></app-container-main>
   </div>
 </template>
 
@@ -9,18 +10,20 @@
 import { Draggable } from 'draggable-vue-directive'
 
 // comp
-import AppContainerHeader from './app-container-header/index'
+import AppContainerHeader from './header/index'
+import AppContainerMain from './main/index'
 
 export default {
   name: 'AppContainer',
   directives: {
     Draggable,
   },
-  components: { AppContainerHeader },
+  components: { AppContainerHeader, AppContainerMain },
   data() {
     return {
       dragProps: {
         handle: null,
+        initialPosition: {},
         boundingRect: null,
         boundingRectMargin: {},
         onDragEnd: this.onDragEnd,
@@ -42,6 +45,10 @@ export default {
      */
     initDragHanlde() {
       this.dragProps.handle = this.$refs['appHeader']
+      this.dragProps.initialPosition = {
+        top: 100,
+        left: 300
+      }
       // this.dragProps.boundingElement = document.getElementById('desktopMain')
       // this.dragProps.boundingRectMargin = {
       //   top: 10,
@@ -55,9 +62,6 @@ export default {
     },
     onDragEnd(positionDiff, absolutePosition, event) {
       let { top = 0, left = 0 } = absolutePosition
-      if(top > 500) {
-        this.dragProps.stopDragging = true
-      }
     }
   },
 }
@@ -72,5 +76,9 @@ export default {
   border-radius: #{$app-container-border-radius};
 
   background-color: #fff;
+}
+.app-main {
+  height: calc(100% - #{$app-container-header-height});
+  padding: 10px;
 }
 </style>
