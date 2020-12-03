@@ -49,13 +49,6 @@ export default {
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
 @import "@/styles/theme/base-theme.scss";
 
-// 背景色
-@mixin dock-bg-color($val-key) {
-  @include theme-control {
-    background-color: get-theme-val($val-key)
-  }
-}
-
 .app-dock-container {
   position: absolute;
   bottom: 0px;
@@ -68,7 +61,7 @@ export default {
   height: 100%;
   overflow: hidden;
   z-index: 1;
-  @include dock-bg-color('dock-bg-color');
+  @include background-color('dock-bg-color');
   backdrop-filter: blur(10px);
 }
 </style>

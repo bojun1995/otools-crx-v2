@@ -35,3 +35,28 @@ $theme-list: (
     background-color: get-theme-val($val-key)
   }
 }
+
+// 圆角
+@mixin border-top-left-radius() {
+  @include theme-control {
+    border-top-left-radius: #{$app-container-border-radius};
+  }
+}
+
+@mixin border-top-right-radius() {
+  @include theme-control {
+    border-top-right-radius: #{$app-container-border-radius};
+  }
+}
+
+@mixin border-bottom-left-radius() {
+  @include theme-control {
+    border-bottom-left-radius: #{$app-container-border-radius};
+  }
+}
+
+@mixin border-bottom-right-radius() {
+  @include theme-control {
+    border-bottom-right-radius: #{$app-container-border-radius};
+  }
+}

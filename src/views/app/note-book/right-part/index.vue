@@ -1,16 +1,12 @@
 <template>
-  <div class="main_container">
-    <note-book></note-book>
+  <div class="right_container">
+    right
   </div>
 </template>
 
 <script>
-// comp
-import NoteBook from '@/views/app/note-book/index'
-
 export default {
-  name: 'AppContainerMain',
-  components: { NoteBook },
+  name: 'RightPart',
   data() {
     return {
       
@@ -28,7 +24,11 @@ export default {
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
 @import "@/styles/theme/base-theme.scss";
 
-.main_container {
+.right_container {
   height: 100%;
+  width: 100%;
+  @include background-color('note-right-bg-color');
+  @include border-top-right-radius();
+  @include border-bottom-right-radius();
 }
 </style>

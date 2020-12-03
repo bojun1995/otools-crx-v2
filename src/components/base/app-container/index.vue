@@ -67,6 +67,5 @@ export default {
   width: 70vw;
   border-radius: #{$app-container-border-radius};
   @include background-color('app-container-bg-color');
-  padding-bottom: #{$app-container-border-radius};
 }
 </style>

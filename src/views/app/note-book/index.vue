@@ -1,12 +1,18 @@
 <template>
-  <div>
-    notebook
+  <div class="note-book_container">
+    <left-part></left-part>
+    <right-part></right-part>
   </div>
 </template>
 
 <script>
+// comp
+import LeftPart from './left-part/index'
+import RightPart from './right-part/index'
+
 export default {
   name: 'NoteBook',
+  components: { LeftPart, RightPart },
   data() {
     return {
       
@@ -22,4 +28,8 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
+.note-book_container {
+  height: 100%;
+  display: flex;
+}
 </style>

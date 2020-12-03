@@ -2,12 +2,16 @@ $theme-main-color: #52ceff;
 
 $light-v1: (
   font-color: #000000,
-  background-color: #ffffff,
+  background-color: #FFFFFF,
 
   // dock
   dock-bg-color: rgba(212, 212, 212, 0.192),
   dock-icon-border-color: $theme-main-color,
 
   // app
-  app-container-bg-color: #fff,
+  app-container-bg-color: #FFFFFF,
+
+  // note-book
+  note-left-bg-color: #FFFFFF,
+  note-right-bg-color: #FDFBFE,
 )
