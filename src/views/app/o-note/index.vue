@@ -4,7 +4,7 @@
       <left-part></left-part>
     </div>
     <div class="middle-part">
-      TREE
+      <middle-part></middle-part>
     </div>
     <div class="right-part">
       MAIN
@@ -15,10 +15,11 @@
 <script>
 // comp
 import LeftPart from './left-part/index'
+import MiddlePart from './middle-part/index'
 
 export default {
   name: 'ONote',
-  components: { LeftPart },
+  components: { LeftPart, MiddlePart },
   data() {
     return {
       
@@ -47,7 +48,6 @@ $other-width: calc(#{$left-part-width} + #{$middle-part-width});
 .left-part {
   height: 100%;
   width: #{$left-part-width};
-  // background-color: rgb(160, 160, 160);
 }
 .middle-part {
   height: 100%;
@@ -56,6 +56,5 @@ $other-width: calc(#{$left-part-width} + #{$middle-part-width});
 .right-part {
   height: 100%;
   width: calc(100% - #{$other-width});
-  // background-color: rgb(88, 88, 88);
 }
 </style>

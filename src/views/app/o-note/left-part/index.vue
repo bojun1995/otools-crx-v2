@@ -5,16 +5,24 @@
     </div>
     <div class="_menu_container">
       <div class="_menu">
-        <a-icon type="plus"/>
+        <div class="_menu_bg">
+          <a-icon type="plus"/>
+        </div>
       </div>
       <div class="_menu">
-        <a-icon type="search"/>
+        <div class="_menu_bg">
+          <a-icon type="search"/>
+        </div>
       </div>
       <div class="_menu">
-        <a-icon type="book"/>
+        <div class="_menu_bg">
+          <a-icon type="book"/>
+        </div>
       </div>
       <div class="_menu">
-        <a-icon type="star"/>
+        <div class="_menu_bg">
+          <a-icon type="star"/>
+        </div>
       </div>
     </div>
   </div>
@@ -38,6 +46,8 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
+@import "@/styles/theme/base-theme.scss";
+
 $left-part-width: 75px;
 $middle-part-width: 200px;
 $other-width: calc(#{$left-part-width} + #{$middle-part-width});
@@ -57,12 +67,29 @@ $other-width: calc(#{$left-part-width} + #{$middle-part-width});
 
 ._menu {
   text-align: center;
-  height: calc(#{$left-part-width} - 15px);
-  line-height: calc(#{$left-part-width} - 40px);
-  font-size: calc(#{$left-part-width} - 40px);
+  height: #{$left-part-width};
+  line-height: #{$left-part-width};
+  font-size: calc(#{$left-part-width} - 45px);
   margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:first-child {
     margin-top: 0px;
+  }
+}
+
+._menu_bg {
+  height: calc(#{$left-part-width} - 25px);
+  width: calc(#{$left-part-width} - 25px);
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  border-radius: calc(#{$left-part-width} - 30px);
+  @include transition-duration();
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(141, 141, 141);
   }
 }
 </style>
