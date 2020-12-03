@@ -1,12 +1,16 @@
 <template>
   <div class="left_container">
-    left
+    <left-head></left-head>
   </div>
 </template>
 
 <script>
+// comp
+import LeftHead from './left-head/index'
+
 export default {
   name: 'LeftPart',
+  components: { LeftHead },
   data() {
     return {
       
@@ -26,7 +30,7 @@ export default {
 
 .left_container {
   height: 100%;
-  width: 200px;
+  width: 270px;
   @include background-color('note-left-bg-color');
   @include border-top-left-radius();
   @include border-bottom-left-radius();

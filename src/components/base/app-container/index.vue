@@ -1,6 +1,11 @@
 <template>
-  <div ref="appContainer" v-draggable="dragProps" class="app-container" >
-    <app-container-main></app-container-main>
+  <div class="full-height">
+    <div ref="appContainer" v-draggable="dragProps" class="app-container" >
+      <app-container-main></app-container-main>
+    </div>
+    <!-- <div class="app-container" >
+      <app-container-main></app-container-main>
+    </div> -->
   </div>
 </template>
 
