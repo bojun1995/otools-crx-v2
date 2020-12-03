@@ -40,7 +40,6 @@ export default {
 @import "@/styles/theme/base-theme.scss";
 
 .desktop {
-  @include transition-duration();
   @include font-color('font-color');
 }
 

@@ -58,7 +58,7 @@ export default {
   margin: 0 auto;
   border-bottom: 4px solid;
   @include dock-icon-border-color('dock-icon-border-color');
-  @include transition-duration(0.1s);
+  transition: width 0.2s ease;
   &:hover {
     width: 50px;
   }

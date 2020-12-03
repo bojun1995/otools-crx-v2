@@ -1,16 +1,17 @@
 <template>
-  <div>
-    <o-note></o-note>
+  <div class="main_container">
+    <!-- <o-note></o-note> -->
+    <note-book></note-book>
   </div>
 </template>
 
 <script>
 // comp
-import ONote from '@/views/app/o-note/index'
+import NoteBook from '@/views/app/note-book/index'
 
 export default {
   name: 'AppContainerMain',
-  components: { ONote },
+  components: { NoteBook },
   data() {
     return {
       
@@ -26,4 +27,10 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" type="text/scss" scoped>
+@import "@/styles/theme/base-theme.scss";
+
+.main_container {
+  height: 100%;
+  padding: 10px;
+}
 </style>

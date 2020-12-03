@@ -8,3 +8,9 @@ body,
 	margin: 0;
 	padding: 0;
 }
+
+div {
+	transition-property: background-color;
+	transition-duration: #{$transition-time};
+	transition-timing-function: ease;
+}

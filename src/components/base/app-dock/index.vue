@@ -69,7 +69,6 @@ export default {
   overflow: hidden;
   z-index: 1;
   @include dock-bg-color('dock-bg-color');
-  @include transition-duration();
   backdrop-filter: blur(10px);
 }
 </style>

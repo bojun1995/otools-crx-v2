@@ -35,15 +35,3 @@ $theme-list: (
     background-color: get-theme-val($val-key)
   }
 }
-
-// 过渡时间
-@mixin transition-duration($val: 'default') {
-  @include theme-control {
-    @if 'default' == $val {
-      transition-duration: $transition-time
-    }
-    @else {
-      transition-duration: $val
-    }
-  }
-}
