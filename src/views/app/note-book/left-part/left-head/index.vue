@@ -8,7 +8,9 @@
       <span class="second-row">and do more</span>
     </div>
     <div class="right-icon">
-      <a-icon type="plus-square"/>
+      <div class="right-icon-container">
+        <a-icon type="plus"/>
+      </div>
     </div>
   </div>
 </template>
@@ -58,9 +60,22 @@ export default {
   }
 }
 
+.right-icon-container {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #ffffff;
+  @include font-color('note-icon-color');
+  cursor: pointer;
+  &:hover {
+    @include background-color('note-icon-color');
+    color: #ffffff;
+  }
+}
+
 .right-icon {
-  font-size: 30px;
-  line-height: 30px;
-  @include font-color('note-icon-color')
+  font-size: 20px;
+  line-height: 28px;
 }
 </style>
