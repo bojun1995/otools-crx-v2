@@ -1,11 +1,11 @@
 <template>
-  <div class="full-height">
-    <div ref="appContainer" v-draggable="dragProps" class="app-container" >
-      <app-container-main></app-container-main>
-    </div>
-    <!-- <div class="app-container" >
+  <div class="app-container_bg">
+    <!-- <div ref="appContainer" v-draggable="dragProps" class="app-container" >
       <app-container-main></app-container-main>
     </div> -->
+    <div ref="appContainer" class="app-container test" >
+      <app-container-main></app-container-main>
+    </div>
   </div>
 </template>
 
@@ -67,10 +67,20 @@ export default {
   }
 }
 
+.app-container_bg {
+  height: 100%;
+}
+
 .app-container {
   height: 70vh;
   width: 70vw;
   border-radius: #{$app-container-border-radius};
   @include background-color('app-container-bg-color');
+}
+
+.test {
+  position: absolute;
+  left: 400px;
+  top: 100px
 }
 </style>

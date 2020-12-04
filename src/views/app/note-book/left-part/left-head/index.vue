@@ -44,8 +44,9 @@ export default {
 }
 
 .left-icon {
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 40px;
+  line-height: 40px;
+  margin-top: -4px;
   @include font-color('note-icon-color')
 }
 
@@ -53,7 +54,8 @@ export default {
   width: 100%;
   font-size: 15px;
   line-height: 17px;
-  padding-left: 10px;
+  padding-left: 5px;
+  user-select: none;
   .first-row {
     font-weight: 600;
   }
@@ -64,17 +66,18 @@ export default {
   height: 30px;
   text-align: center;
   border-radius: 3px;
-  background-color: #ffffff;
-  @include font-color('note-icon-color');
   cursor: pointer;
+
+  @include background-color('note-icon-color');
+  color: #ffffff;
   &:hover {
-    @include background-color('note-icon-color');
-    color: #ffffff;
+    background-color: #ffffff;
+    @include font-color('note-icon-color');
   }
 }
 
 .right-icon {
   font-size: 20px;
-  line-height: 28px;
+  line-height: 29px;
 }
 </style>

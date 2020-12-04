@@ -17,9 +17,11 @@ export default {
   data() {
     return {
       openAppList: [
-        { id: 'el-icon-apple', sort: 0, type: 'el-icon-apple' },
+        { id: 'el-icon-sunrise-1', sort: 0, type: 'el-icon-sunrise-1' },
         { id: 'el-icon-picture-outline-round', sort: 2, type: 'el-icon-picture-outline-round' },
         { id: 'el-icon-s-promotion', sort: 1, type: 'el-icon-s-promotion' },
+        { id: 'el-icon-cpu', sort: 3, type: 'el-icon-cpu' },
+        { id: 'el-icon-bank-card', sort: 4, type: 'el-icon-bank-card' },
       ]
     }
   },

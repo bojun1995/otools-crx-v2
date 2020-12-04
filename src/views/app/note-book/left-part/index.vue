@@ -1,16 +1,18 @@
 <template>
   <div class="left_container">
     <left-head></left-head>
+    <left-main></left-main>
   </div>
 </template>
 
 <script>
 // comp
 import LeftHead from './left-head/index'
+import LeftMain from './left-main/index'
 
 export default {
   name: 'LeftPart',
-  components: { LeftHead },
+  components: { LeftHead, LeftMain },
   data() {
     return {
       
@@ -34,5 +36,7 @@ export default {
   @include background-color('note-left-bg-color');
   @include border-top-left-radius();
   @include border-bottom-left-radius();
+  display: flex;
+  flex-direction: column;
 }
 </style>
