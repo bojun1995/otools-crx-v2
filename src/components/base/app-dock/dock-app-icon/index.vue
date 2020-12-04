@@ -1,7 +1,7 @@
 <template>
   <div class="dock-app-icon_container">
     <div class="dock-app-icon_border">
-      <a-icon :type="type" class="dock-app-icon"/>
+      <i class="dock-app-icon" :class="type"></i>
     </div>
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'github'
+      default: 'el-icon-apple'
     }
   },
   data() {
@@ -43,7 +43,6 @@ export default {
   height: 50px;
   width: 50px;
   text-align: center;
-  padding-top: 8px;
   margin-right: 1px;
   &:last-child {
     margin-right: 0px;
@@ -53,7 +52,6 @@ export default {
   }
 }
 .dock-app-icon_border {
-  height: 100%;
   width: 44px;
   margin: 0 auto;
   border-bottom: 4px solid;
@@ -65,6 +63,6 @@ export default {
 }
 .dock-app-icon {
   font-size: 30px;
-  line-height: 30px;
+  line-height: 46px;
 }
 </style>

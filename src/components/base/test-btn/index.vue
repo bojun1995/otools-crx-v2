@@ -1,20 +1,9 @@
 <template>
   <div>
-    <a-form layout="inline">
-      <a-form-item label="theme">
-        <a-button-group>
-          <a-button @click="onThemeChange('dark-v1')">
-            dark
-          </a-button>
-          <a-button @click="onThemeChange('light-v1')">
-            light
-          </a-button>
-        </a-button-group>
-      </a-form-item>
-      <a-form-item label="themeName">
-        <span>{{ cp_theme }}</span>
-      </a-form-item>
-    </a-form>
+    <el-button-group>
+      <el-button type="primary" size="default" @click="onThemeChange('dark-v1')">dark</el-button>
+      <el-button type="primary" size="default" @click="onThemeChange('light-v1')">light</el-button>
+    </el-button-group>
   </div>
 </template>
 

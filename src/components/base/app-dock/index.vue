@@ -17,10 +17,9 @@ export default {
   data() {
     return {
       openAppList: [
-        { id: 'github', sort: 0, type: 'github' },
-        { id: 'control', sort: 2, type: 'control' },
-        { id: 'compass', sort: 1, type: 'compass' },
-        { id: 'compass', sort: 3, type: 'code' },
+        { id: 'el-icon-apple', sort: 0, type: 'el-icon-apple' },
+        { id: 'el-icon-picture-outline-round', sort: 2, type: 'el-icon-picture-outline-round' },
+        { id: 'el-icon-s-promotion', sort: 1, type: 'el-icon-s-promotion' },
       ]
     }
   },

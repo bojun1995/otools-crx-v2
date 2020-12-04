@@ -1,7 +1,7 @@
 <template>
   <div class="head_container">
     <div class="left-icon">
-      <a-icon type="github"/>
+      <i class="el-icon-s-management"></i>
     </div>
     <div class="middle-text">
       <span class="first-row">Thinkless</span></br>
@@ -9,7 +9,7 @@
     </div>
     <div class="right-icon">
       <div class="right-icon-container">
-        <a-icon type="plus"/>
+        <i class="el-icon-edit-outline"></i>
       </div>
     </div>
   </div>
@@ -37,7 +37,6 @@ export default {
 
 .head_container {
   height: 50px;
-  width: 100%;
   @include border-top-left-radius();
   display: flex;
   justify-content: space-between;

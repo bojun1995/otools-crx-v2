@@ -8,10 +8,10 @@ Vue.config.productionTip = false
 // scss
 import '@/styles/index.scss'
 
-// antdv
-import 'ant-design-vue/dist/antd.css'; // or 'ant-design-vue/dist/antd.less'
-import Antd from 'ant-design-vue';
-Vue.use(Antd)
+// element
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 
 new Vue({
   router,
