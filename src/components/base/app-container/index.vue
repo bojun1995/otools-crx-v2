@@ -75,7 +75,7 @@ export default {
   height: 70vh;
   width: 70vw;
   border-radius: #{$app-container-border-radius};
-  @include background-color('app-container-bg-color');
+  // @include background-color('app-container-bg-color');
 }
 
 .test {

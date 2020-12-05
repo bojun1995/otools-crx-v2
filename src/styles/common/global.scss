@@ -14,3 +14,10 @@ div {
 	transition-duration: #{$transition-time};
 	transition-timing-function: ease;
 }
+
+.el-scrollbar { 
+	height: 100%;
+	.el-scrollbar__wrap {
+		overflow-x: hidden;
+	}
+}

@@ -37,9 +37,11 @@ export default {
 
 .head_container {
   height: 50px;
+  width: 100%;
   @include border-top-left-radius();
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
   padding: 10px;
 }
 

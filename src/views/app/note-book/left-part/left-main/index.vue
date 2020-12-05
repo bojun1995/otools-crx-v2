@@ -27,11 +27,7 @@ export default {
 @import "@/styles/theme/base-theme.scss";
 
 .left-main {
-  height: calc(100% - 70px);
-}
-
-.scrollbar {
-  height: 100%;
+  height: calc(100% - 50px);
 }
 
 .test {
