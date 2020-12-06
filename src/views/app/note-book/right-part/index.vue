@@ -1,6 +1,5 @@
 <template>
   <div class="right_container">
-    
   </div>
 </template>
 
