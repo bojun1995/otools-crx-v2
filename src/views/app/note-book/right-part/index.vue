@@ -1,6 +1,6 @@
 <template>
   <div class="right_container">
-    right
+    
   </div>
 </template>
 
