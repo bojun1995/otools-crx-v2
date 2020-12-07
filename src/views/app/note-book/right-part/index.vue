@@ -26,6 +26,8 @@ export default {
 .right_container {
   height: 100%;
   width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
   @include background-color('note-right-bg-color');
   @include border-top-right-radius();
   @include border-bottom-right-radius();
