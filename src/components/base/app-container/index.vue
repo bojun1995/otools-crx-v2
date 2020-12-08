@@ -1,9 +1,7 @@
 <template>
   <div class="app-container_bg">
-    <!-- <div ref="appContainer" v-draggable="dragProps" class="app-container" >
-      <app-container-main></app-container-main>
-    </div> -->
-    <div ref="appContainer" class="app-container test" >
+    <div ref="appContainer" v-draggable="dragProps" class="app-container" >
+      <app-container-header ref="header" class="drag-header"></app-container-header>
       <app-container-main></app-container-main>
     </div>
   </div>
@@ -15,16 +13,18 @@ import { Draggable } from 'draggable-vue-directive'
 
 // comp
 import AppContainerMain from './main/index'
+import AppContainerHeader from './header/index'
 
 export default {
   name: 'AppContainer',
   directives: {
     Draggable,
   },
-  components: { AppContainerMain },
+  components: { AppContainerMain, AppContainerHeader },
   data() {
     return {
       dragProps: {
+        handle: null,
         initialPosition: {},
         resetInitialPos: true,
         onDragEnd: this.onDragEnd,
@@ -45,6 +45,7 @@ export default {
      * @description : 初始拖拽组件的hanlde
      */
     initDragHanlde() {
+      this.dragProps.handle = this.$refs.header
       this.dragProps.initialPosition = {
         top: 100,
         left: 300
@@ -52,7 +53,7 @@ export default {
     },
     onDragEnd(positionDiff, absolutePosition, event) {
       let { top = 0, left = 0 } = absolutePosition
-      console.log(`top:${top}, left:${left}`);
+      // console.log(`top:${top}, left:${left}`)
     }
   },
 }
@@ -75,12 +76,11 @@ export default {
   height: 70vh;
   width: 70vw;
   border-radius: #{$app-container-border-radius};
-  // @include background-color('app-container-bg-color');
 }
 
-.test {
+.drag-header {
   position: absolute;
-  left: 400px;
-  top: 100px
+  height: #{$app-container-header-height};
+  width: 100%;
 }
 </style>

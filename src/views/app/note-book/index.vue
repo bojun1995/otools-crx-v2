@@ -1,6 +1,6 @@
 <template>
   <div class="note-book_container">
-    <left-part></left-part>
+    <left-part class="left-part"></left-part>
     <right-part></right-part>
   </div>
 </template>
@@ -32,4 +32,9 @@ export default {
   height: 100%;
   display: flex;
 }
+
+.left-part {
+  z-index: 2;
+}
+
 </style>
