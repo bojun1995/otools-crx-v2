@@ -30,14 +30,14 @@ export default {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 45px 25px 25px 25px;
   @include background-color('note-right-bg-color');
   @include border-top-right-radius();
   @include border-bottom-right-radius();
 }
 
 .note-content {
-  background-color: #fff;
+  @include background-color('note-left-bg-color');
   height: 100%;
   width: 100%;
 }
